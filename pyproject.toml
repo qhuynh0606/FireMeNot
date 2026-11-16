@@ -1,0 +1,17 @@
+[project]
+name = "firemenot"
+version = "0.1.0"
+description = "FireMeNot: wildfire smoke detection (SDSU CS450)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-rs"  # show WHY each test was skipped (i.e. which TODOs are left)
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
